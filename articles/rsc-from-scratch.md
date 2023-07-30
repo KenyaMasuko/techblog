@@ -3,7 +3,7 @@ title: "『RSC From Scratch. Part 1: Server Components』を読んだぜ"
 emoji: "🧘‍♂️"
 type: "tech"
 topics: ["react", "nextjs", "web", "frontend", "note"]
-published: false
+published: true
 ---
 
 みなさん初めまして、[けんや](https://twitter.com/kenchan_dayoooo)です。
