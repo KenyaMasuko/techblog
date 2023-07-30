@@ -4,6 +4,7 @@ emoji: "🧘‍♂️"
 type: "tech"
 topics: ["react", "nextjs", "web", "frontend", "note"]
 published: true
+publication_name: "eishin_blog"
 ---
 
 みなさん初めまして、[けんや](https://twitter.com/kenchan_dayoooo)です。
