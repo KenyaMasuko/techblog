@@ -39,50 +39,50 @@ publication_name: "eishin_blog"
   ちょうどプロダクト開発に入ろうとした矢先、App Router が stable となりました。どうやらプロダクションで使えるらしいぞと聞いたので、App Router で作ってみることにしました。しかしRSCのテストがうまいことできなかったり、パラダイムシフトにより他の開発者がその概要を理解し難い部分があったりしたのを思い出します。
   ただ、テストや Storybook が徐々に RSC に対応し始めているようであるのでこの辺りもそれに伴いテストを厚くしたり、VRT を入れたりしてプロダクトの改善を行っていきたいです。
 
-  https://storybook.js.org/blog/storybook-react-server-components/
-  https://zenn.dev/uyas/articles/bc58a4bed15ed4
-  https://quramy.medium.com/react-server-component-%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E3%81%A8-container-presentation-separation-7da455d66576
+https://storybook.js.org/blog/storybook-react-server-components/
+https://zenn.dev/uyas/articles/bc58a4bed15ed4
+https://quramy.medium.com/react-server-component-%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88%E3%81%A8-container-presentation-separation-7da455d66576
 
 - ### GitHub Actionsで色々整えた話
 
   プロダクト開発を通じて初めてちゃんとGitHub Actionsを書きました。社内ではGitHub Actionsについての知見はなかったのですが、テストやStorybookへのデプロイは絶対最初に自動化しておいた方がいいと思い簡単なCIを構築しました。プロダクションコードを書くだけではない貴重な経験ができたので個人的にはとても良かったなと思います。
   またVercelへのデプロイもGitHub Actionsを使用して行いました。ホスティング自体はVercelで行なっているので、pushすれば自動でビルドされるのですが有料プランですとseatのあるメンバーしかpushしてビルドすることができません。業務委託の方や他のメンバーがジョインしてきた時に毎回seatを追加していてはちりつもでコストも意外とバカにならないなと思いVercel CLIを使用してデプロイするようGitHub Actionsを書きました。
 
-  https://zenn.dev/ttskch/articles/691fb62fbb6b1b
-  https://zenn.dev/keitakn/articles/storybook-deploy-to-chromatic
+https://zenn.dev/ttskch/articles/691fb62fbb6b1b
+https://zenn.dev/keitakn/articles/storybook-deploy-to-chromatic
 
 - ### monorepo 移行
 
   開発しているプロダクトがtoBのアプリケーションだったので管理画面とユーザー側の画面に分かれている一般的なアプリケーションだったのですが、それぞれを別ドメインでデプロイすることになり、急遽monorepoに移行しました。移行するまでは1つのNext.jsのプロジェクトの`app`配下に管理者側ととユーザー側の両方の画面がある状態でした。
   Next.jsでmonorepoをやるって何がいいんだろう〜と考えていたところ、うっすら聞いたことのある[Turborepo](https://turbo.build/repo)というものに辿りつき「これならサクッとmonorepoを構築できそうじゃないか？」となり試してみました。結果としてかなり簡単にデプロイができ、運用も特に問題なさそうだったので`Turborepo`を採用することにしました。正直monorepo移行への期間が十分にあったわけではないので、ベストとはいえないかもしれないですが現状の開発に特に不満はないです。
 
-  https://zenn.dev/burizae/articles/c811cae767965a
-  https://www.chromatic.com/docs/monorepos/
-  https://tech.asoview.co.jp/entry/2022/12/23/095914
-  https://zenn.dev/hayato94087/articles/d2956e662202a7
+https://zenn.dev/burizae/articles/c811cae767965a
+https://www.chromatic.com/docs/monorepos/
+https://tech.asoview.co.jp/entry/2022/12/23/095914
+https://zenn.dev/hayato94087/articles/d2956e662202a7
 
 - ### AIチャットボット実装
   GPTを使用したチャットボットも実装しました。笑
   リリース時点でのプロダクトからは無くなってしまった機能ですが、半日くらいでサクッと実装できたのでちょっとした息抜きに楽しかったです。
 
-  https://zenn.dev/rorisutarou/articles/6f21450ea34cc3
+https://zenn.dev/rorisutarou/articles/6f21450ea34cc3
 
 - ### [React Hook Form](https://react-hook-form.com/) を使用したフォームの作成
 
   私自身初めて React Hook Form をこのプロダクトで使用しました。制御コンポーネント・非制御コンポーネントがなんなのかわからないところからの出発だったので、動的なフォームの作成だったり、型のエラーがかなり出たりで非常に苦戦しました。
   またドラッグ＆ドロップもできるフォームや画像を切り抜いて保存するコンポーネントを実装したのも面白かったです。
 
-  https://zenn.dev/manalink_dev/articles/manalink-react-hook-form-v7
-  https://react-hook-form.com/docs/usefieldarray
-  https://zenn.dev/kyosuke_14/articles/e892bffc0357da
-  https://zenn.dev/wintyo/articles/d39841c63cc9c9
+https://zenn.dev/manalink_dev/articles/manalink-react-hook-form-v7
+https://react-hook-form.com/docs/usefieldarray
+https://zenn.dev/kyosuke_14/articles/e892bffc0357da
+https://zenn.dev/wintyo/articles/d39841c63cc9c9
 
 - ### デザインシステムの構築
 
   私が開発したプロダクトから少しづつ自社のデザインシステムを作ることになりました。私はデザインシステムで重要なのがSSoT（Single Source of Truth）だと考えているので、いかにFigmaにコードが追従していくかが重要になると思いました。なのでできるだけデザイントークンをコードと同期させたり、コンポーネントは Storybook と紐付けて管理しています。現状このデザインシステムを使用しているのが私の開発したプロダクトのみなので、この管理が功を奏すかはわかりませんが、今後の開発が柔軟にデザインシステムの変更に同期できるようにベターな方法を選択していきたいです。
 
-  https://zenn.dev/mi_/articles/453f7594120c9a
-  https://zenn.dev/poteboy/articles/4739b882e22961
+https://zenn.dev/mi_/articles/453f7594120c9a
+https://zenn.dev/poteboy/articles/4739b882e22961
 
 ## 経験できてよかったこと
 
@@ -101,8 +101,8 @@ publication_name: "eishin_blog"
   言うても Unit Test を厚めに書いてるだけですが、それでも非常に良い経験だったなと思います。テストコードを書く時には仕様を表現しようと意識しておりました。テストコードを通して他の開発者が仕様をある程度キャッチアップできるようにすることで、テストケースの漏れを最小限にとどめることができると感じています。またそれによりコンポーネントの設計や実装段階で仕様の漏れなどにも気づくことができます。
   徐々にインテグレーションテストや E2E も増やしていきたいです。
 
-  https://zenn.dev/takepepe/articles/frontend-testing-book
-  https://peaks.cc/books/testing_with_jest
+https://zenn.dev/takepepe/articles/frontend-testing-book
+https://peaks.cc/books/testing_with_jest
 
 - ### リリースまですること
   規模の小さい会社で 1 からの開発だとリリースまでたどり着けないことも珍しくはないのではないでしょうか？私自身個人開発でもリリースまできっちりできたことの方が少なかったですし、自分の手で実装したプロダクトがリリースされるのは非常に達成感があり、これからアップデートし続けることに胸が躍る想いです。これからは書き捨てのコードではなく他の開発者にみられても恥ずかしくないコードをかけるような力をつけていきたいです。
