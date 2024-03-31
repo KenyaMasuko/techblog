@@ -4,7 +4,7 @@ emoji: "😎"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["yamadaui", "react", "nextjs", "frontend", "web"]
 published: true
-2024-03-31 23:00
+published_at: 2024-03-31 23:00
 ---
 
 # はじめに
