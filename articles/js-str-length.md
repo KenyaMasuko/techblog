@@ -4,6 +4,7 @@ emoji: "👋"
 type: "tech"
 topics: [javascript, typescript, nodejs]
 published: true
+publication_name: "dev_commune"
 ---
 
 以下のコードを実行すると何が出力されるでしょうか？
