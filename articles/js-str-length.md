@@ -1,9 +1,9 @@
 ---
-title: 「"Hi👋".length」は3なのか
+title: Hi👋.length は３なのか
 emoji: "👋"
 type: "tech"
 topics: [javascript, typescript, nodejs]
-published: false
+published: true
 ---
 
 以下のコードを実行すると何が出力されるでしょうか？
@@ -41,15 +41,17 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/St
 "👋".length; // 2
 ```
 
+## なぜ「正しく」文字列がカウントされないのか
+
 ここで改めて最初に提示したコードを見てみましょう。
 
 ```js
 console.log("Hi👋".length);
 ```
 
-このコードは、`Hi👋`というコード単位の数を返すコードです。この文字列は、`Hi`と`👋`の 2 つの要素から構成されています。`Hi`は 2 つのコード単位、`👋`も 2 つのコード単位で構成されているため、合計で 4 という結果になります。
+このコードは、`Hi👋`というコード単位の数を返すコードです。このコードは、`Hi`と`👋`の 2 つの要素から構成されています。`Hi`は 2 つのコード単位、`👋`も 2 つのコード単位で構成されているため、合計で 4 という結果になります。
 
-しかし、先ほどのコードが 4 文字として表示されるのは分かりましたが、一般的に`👋`を 2 文字としてカウントしたい人は少数派でしょう。では、`👋` を 1 文字として扱いたい場合はどうすればいいでしょうか？
+しかし、これで先ほどのコードが 4 文字としてカウントされるのは分かりましたが、一般的に`👋`を 2 文字としてカウントしたい人は少数派でしょう。では、`👋` を 1 文字として扱いたい場合はどうすればいいでしょうか？
 
 ## 文字列の長さを「正しく」カウントする方法
 
@@ -71,7 +73,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/In
 
 ## まとめ
 
-今回の記事では`.length`が期待する文字数を返却しないケースがあるというのを取り上げたかったので、`Intl.Segmenter`の詳細については他にとても勉強になる記事・ドキュメントがありますのでぜひそちらを参照してください。
+今回の記事では`.length`が期待する文字数を返却しないケースがあるというのを取り上げました。`Intl.Segmenter`の詳細については他にとても勉強になる記事・ドキュメントがありますのでぜひそちらを参照してください。
 
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 https://susisu.hatenablog.com/entry/2025/01/03/180241
