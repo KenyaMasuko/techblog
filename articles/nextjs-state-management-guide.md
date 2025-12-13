@@ -11,6 +11,8 @@ publication_name: "dev_commune"
 この記事はAIと対話しながら執筆しています。内容の正確性については筆者が確認していますが、誤りがあればご指摘いただけると幸いです。
 :::
 
+本記事は[Commune Developers Advent Calendar 2025](https://qiita.com/advent-calendar/2025/commune)の13日目の記事です。
+
 ## はじめに
 
 この記事は、筆者がチームで「この状態を何で扱うか」を判断するにあたりガイドラインを整理したものです。
