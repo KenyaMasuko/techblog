@@ -3,7 +3,7 @@ title: "AI駆動でプロダクト開発をやってみてわかったこと"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["claudecode", "aiエージェント", "ai", "nextjs"]
-published: false
+published: true
 publication_name: "0llc"
 ---
 
